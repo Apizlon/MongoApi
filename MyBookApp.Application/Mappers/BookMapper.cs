@@ -9,6 +9,7 @@ public static class BookMapper
     {
         return new Book
         {
+            Id = request.Id,
             Name = request.Name,
             Description = request.Description,
             Author = request.Author
