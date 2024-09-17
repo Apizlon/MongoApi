@@ -39,4 +39,10 @@ public class MongoRepository : IBookRepository
         var book = await _books.Find(b => b.Id == id).FirstOrDefaultAsync();
         return book != null;
     }
+    
+    public async Task<IEnumerable<Book>> GetBooksAsync()
+    {
+        var books = _books.Find(Builders<Book>.Filter.Empty).ToEnumerable();
+        return books;
+    }
 }

@@ -54,4 +54,9 @@ public class BookService : IBookService
     {
         return await _bookRepository.BookExistsAsync(id);
     }
+    
+    public async Task<IEnumerable<Book>> GetBooksAsync()
+    {
+        return await _bookRepository.GetBooksAsync();
+    }
 }

@@ -9,4 +9,5 @@ public interface IBookRepository
     Task<Book> GetBookAsync(int id);
     Task UpdateBookAsync(int id,Book book);
     Task<bool> BookExistsAsync(int id);
+    Task<IEnumerable<Book>> GetBooksAsync();
 }

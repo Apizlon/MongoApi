@@ -6,7 +6,7 @@ namespace OuterTest;
 class Program
 {
     private static readonly HttpClient client = new HttpClient();
-    private static readonly string apiUrl = "https://localhost:7106/api/Book";
+    private static readonly string apiUrl = "http://localhost:5013/api/Book";
 
     static async Task Main(string[] args)
     {
@@ -41,7 +41,7 @@ class Program
 
     static async Task AddElements(int count)
     {
-        for (int i = 0; i < 100_000; i++)
+        for (int i = 0; i < count; i++)
         {
             var book = new
             {
